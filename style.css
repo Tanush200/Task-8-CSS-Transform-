@@ -294,3 +294,30 @@ body {
     transition: transform 0.3s ease;
     transform: scale(1.2) rotate(10deg);
 }
+@keyframes orbit {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    25% {
+        transform: translateX(50px) translateY(-50px) scale(0.9);
+    }
+    50% {
+        transform: translateX(100px) translateY(0) scale(1.2);
+    }
+    75% {
+        transform: translateX(50px) translateY(50px) scale(0.9);
+    }
+    100% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+.laundry-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    height: 70vh;
+    position: relative;
+    top: -65px;
+    animation: orbit 5s infinite ease-in-out;
+}
